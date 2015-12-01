@@ -8,8 +8,8 @@ var client = new Twitter({
     consumer_secret: '',
     access_token_key: '',
     access_token_secret: ''
-});
-var params = {screen_name: 'nodejs'};
+}),
+    tweetinterval = 1800; //Tweetinterval in seconds, so 1800 = every 30 minutes
 function tweet (text) {
     client.post('statuses/update', {status: text}, function (error, tweet, response) {
         if (error) throw error;
@@ -32,11 +32,7 @@ function addlast10(text) {
     last10dongs[0] = text;
 }
 function inlast10dongs(text) {
-    if (last10dongs.indexOf(text) > -1) {
-        return true;
-    } else {
-        return false;
-    }
+    return (last10dongs.indexOf(text) > -1);
 }
 
 var donger = String(fs.readFileSync("items.txt")).split("||||");
@@ -52,7 +48,7 @@ while (inlast10dongs(dong)) {
     dong = donger[random];
 }
 addlast10(dong);
-tweet(donger[random])
+tweet(donger[random]);
 console.log("[TWITTERBOT]: " +last10dongs);
 setInterval(function () {
     var donger = String(fs.readFileSync("dongers.txt")).split("||||");
@@ -70,4 +66,4 @@ setInterval(function () {
     addlast10(dong);
     tweet(donger[random]);
     console.log("[TWITTERBOT]: " +last10dongs);
-}, 1800000);
+}, tweetinterval*1000);
