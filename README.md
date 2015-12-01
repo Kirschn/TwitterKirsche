@@ -10,11 +10,11 @@ Requirements:
  * Twitter API Application
 
 Install:
-1. Clone Repository
-2. Edit bot.js:
-??* Insert your API Keys
-??* Set Tweetinterval
-3. Add at least 10 items to the items.txt, if not you'll run into some weird Twitter API issues. To seperate two items from each other use |||| (example file included!)
+ 1. Clone Repository
+ 2. Edit bot.js:
+ * Insert your API Keys
+ * Set Tweetinterval
+ 3. Add at least 10 items to the items.txt, if not you'll run into some weird Twitter API issues. To seperate two items from each other use |||| (example file included!)
 
 ##Start:
 `node bot.js`
