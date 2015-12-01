@@ -25,7 +25,7 @@ function addlast10(text) {
     last10dongs[7] =last10dongs[6];
     last10dongs[6] =last10dongs[5];
     last10dongs[5] =last10dongs[4];
-    last10dongs[4] =last10dongs[3];
+    last10dongs[4] = last10dongs[3];
     last10dongs[3] =last10dongs[2];
     last10dongs[2] =last10dongs[1];
     last10dongs[1] =last10dongs[0];
