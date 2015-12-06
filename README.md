@@ -20,3 +20,5 @@ Install:
 `node bot.js`
 
 Running example of this bot: [@DongerBot](http://twitter.com/DongerBot)
+
+The PHP API file will return a JSON encoded String with a random Item from the items.txt. If you want a plain text item, add the GET parameter ?textonly to your request. 
