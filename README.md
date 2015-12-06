@@ -1,6 +1,6 @@
 # TwitterKirsche
 TwitterKirsche is a very simple twitter bot. It is completely written in Node.js and supports only plain text tweets in a preset interval.
-The tweets are read from a file called items.txt and is everytime the bot sends a tweet reloaded, therefore changes on the fly are no problem
+The tweets are read from a file called items.txt which everytime the bot sends a tweet reloaded, therefore changes on the fly are no problem.
 
 ##Installing
 Requirements:
