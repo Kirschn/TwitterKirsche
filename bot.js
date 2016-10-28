@@ -44,7 +44,7 @@ addlast10(dong);
 tweet(donger[random]);
 console.log("[TWITTERBOT]: " +last10dongs);
 setInterval(function () {
-    var donger = String(fs.readFileSync("dongers.txt")).split("||||");
+    var donger = JSON.parse(String(fs.readFileSync("dongers.json"))).objects;
     var min = 0;
     var max = Object.keys(donger).length;
     var random = Math.round(Math.random() * (max - min)) + min;
